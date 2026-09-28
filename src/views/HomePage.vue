@@ -27,7 +27,9 @@ const profile = ref({
 </script>
 
 <template>
-  <main class="flex min-h-screen flex-col items-center px-4 py-8">
+  <main
+    class="flex min-h-screen flex-col items-center bg-linear-to-b from-gray-950 via-gray-900 to-pink-950 px-4 py-12 text-white"
+  >
     <!-- Profile Header -->
     <div class="mb-8 flex flex-col items-center text-center">
       <div
@@ -55,12 +57,21 @@ const profile = ref({
       />
     </div>
 
-    <!-- Navigate to Info -->
-    <RouterLink
-      to="/info"
-      class="mt-8 text-sm text-gray-400 underline-offset-4 transition-colors duration-200 hover:text-green-400 hover:underline"
-    >
-      About me →
-    </RouterLink>
+    <!-- Navigation Links -->
+    <div class="mt-8 flex flex-col items-center gap-3">
+      <RouterLink
+        to="/info"
+        class="block w-48 rounded-lg px-4 py-3 text-center text-lg font-semibold text-gray-400 transition-colors duration-200 hover:bg-gray-800 hover:text-green-400"
+      >
+        About Me →
+      </RouterLink>
+
+      <RouterLink
+        to="/projects"
+        class="block w-48 rounded-lg px-4 py-3 text-center text-lg font-semibold text-gray-400 transition-colors duration-200 hover:bg-gray-800 hover:text-green-400"
+      >
+        My Projects →
+      </RouterLink>
+    </div>
   </main>
 </template>

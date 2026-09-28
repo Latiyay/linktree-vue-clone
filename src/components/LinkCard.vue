@@ -33,10 +33,10 @@ const icons = {
 
 <template>
   <a
-    href="#"
+    :href="url"
     target="_blank"
     rel="noopener noreferrer"
-    class="group flex w-full items-center gap-4 rounded-xl border border-gray-700 bg-gray-800 p-4 shadow-md shadow-gray-900/50 transition-all duration-300 hover:scale-[1.02] hover:border-green-600 hover:shadow-xl hover:shadow-green-500/20"
+    class="group relative flex w-full items-center gap-4 rounded-xl border border-gray-700 bg-gray-800 p-4 shadow-md transition-colors duration-200 hover:border-green-400 hover:bg-gray-700"
   >
     <!-- Icon Container -->
     <div
