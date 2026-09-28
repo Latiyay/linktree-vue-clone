@@ -3,7 +3,7 @@
     href="#"
     target="_blank"
     rel="noopener noreferrer"
-    class="flex w-full items-center gap-4 rounded-xl border border-gray-700 bg-gray-800 p-4 shadow-md shadow-gray-900/50 transition-all duration-300 hover:scale-[1.02] hover:border-green-600 hover:shadow-xl hover:shadow-green-500/20"
+    class="group flex w-full items-center gap-4 rounded-xl border border-gray-700 bg-gray-800 p-4 shadow-md shadow-gray-900/50 transition-all duration-300 hover:scale-[1.02] hover:border-green-600 hover:shadow-xl hover:shadow-green-500/20"
   >
     <!-- Icon Container -->
     <div
@@ -13,7 +13,7 @@
         viewBox="0 0 24 24"
         fill="none"
         stroke=" currentColor"
-        class="h-6 w-6"
+        class="h-6 w-6 transition-transform duration-300 group-hover:rotate-6"
       >
         <path
           stroke-linecap="round"
@@ -29,5 +29,10 @@
       <h3 class="truncate font-display font-semibold text-white">Link Title</h3>
       <p class="truncate text-sm text-gray-400">Link Description</p>
     </div>
+
+    <!-- Hover Glow Effect -->
+    <div
+      class="absolute inset-0 rounded-xl bg-linear-to-r from-green-500/0 via-green-500/10 to-green-500/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+    />
   </a>
 </template>
