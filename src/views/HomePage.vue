@@ -7,6 +7,22 @@ const profile = ref({
   slogan: 'Web Developer and Student',
   avatar:
     'https://api.dicebear.com/10.x/micah/svg?clothesVariant=collared&earringsVariant=hoop&earsVariant=attached&eyebrowsVariant=eyelashesUp,up&eyesVariant=eyes,smiling,smilingShadow&facialHairVariant=&glassesVariant=round&hairVariant=full&mouthVariant=laughing,pucker,smile,smirk&backgroundColor=f4b8ef&baseColor=77311d,5f2111&earringColor=f9c9b6,e0ddff,f4d150,ffeba4,fc909f,ffedef,ffffff&eyeShadowColor=e0ddff,ffeba4,ffedef,ffffff&facialHairColor=&hairColor=f9c9b6,000000,ac6651,fc909f,77311d,ffffff&shirtColor=f9c9b6,d2eff3,e0ddff,ffeba4,fc909f,ffedef,6bd9e9,ffffff&seed=de3pl48t',
+  links: [
+    {
+      id: 1,
+      title: 'GitHub',
+      url: 'https://github.com/Latiyay',
+      icon: 'code',
+      description: 'Check out my web projects!',
+    },
+    {
+      id: 2,
+      title: 'Linkedin',
+      url: 'https://www.linkedin.com/in/latisha-washington-4b48b171/',
+      icon: 'briefcase',
+      description: 'Connect with me professionally!',
+    },
+  ],
 })
 </script>
 
@@ -30,8 +46,12 @@ const profile = ref({
     <!-- Link List -->
     <div class="flex w-full max-w-md flex-col gap-4">
       <LinkCard
-        v-for="x of [1, 2, 3]"
-        :key="x"
+        v-for="link in profile.links"
+        :key="link.id"
+        :title="link.title"
+        :url="link.url"
+        :description="link.description"
+        :icon="link.icon"
       />
     </div>
 
