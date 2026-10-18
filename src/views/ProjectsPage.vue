@@ -11,6 +11,15 @@ const projects = [
     description: 'My Expense Splitter rebuilt with Vue.js and reusable components.',
     technologies: ['Vue.js', 'JavaScript', 'CSS'],
     github: 'https://github.com/Latiyay/expense-splitter-vue',
+    live: 'https://expense-splitter-vue.latisha-w.workers.dev/',
+  },
+
+  {
+    title: 'Anime Roulette Machine',
+    description: 'A Vue application that recommends random anime using the Tenrai API.',
+    technologies: ['Vue.js', 'Tailwind CSS', 'JavaScript', 'REST API'],
+    github: 'https://github.com/Latiyay/anime-roulette-watchlist',
+    live: 'https://anime-roulette-machine.latisha-w.workers.dev',
   },
 ]
 </script>
@@ -58,6 +67,15 @@ const projects = [
             class="mt-6 inline-block rounded-lg bg-emerald-600 px-5 py-2 font-medium text-white transition hover:bg-emerald-500"
           >
             View on GitHub ↗
+          </a>
+          <a
+            v-if="project.live"
+            :href="project.live"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-6 ml-3 inline-block rounded-lg bg-pink-600 px-5 py-2 font-medium text-white transition hover:bg-pink-500"
+          >
+            View Live Project ↗
           </a>
         </article>
       </div>
