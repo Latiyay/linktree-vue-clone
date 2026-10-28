@@ -13,7 +13,7 @@ const profile = ref({
       title: 'GitHub',
       url: 'https://github.com/Latiyay',
       icon: 'code',
-      description: 'Check out my web projects!',
+      description: 'Check out my coding projects!',
     },
     {
       id: 2,
@@ -28,7 +28,7 @@ const profile = ref({
 
 <template>
   <main
-    class="flex min-h-screen flex-col items-center bg-linear-to-b from-gray-950 via-gray-900 to-pink-950 px-4 py-12 text-white"
+    class="flex min-h-screen flex-col items-center bg-linear-to-b from-gray-950 via-gray-900 to-pink-400 px-4 py-12 text-white"
   >
     <!-- Profile Header -->
     <div class="mb-8 flex flex-col items-center text-center">
@@ -45,20 +45,8 @@ const profile = ref({
       <p class="max-w-xs text-gray-300 sm:text-lg">{{ profile.slogan }}</p>
     </div>
 
-    <!-- Link List -->
-    <div class="flex w-full max-w-md flex-col gap-4">
-      <LinkCard
-        v-for="link in profile.links"
-        :key="link.id"
-        :title="link.title"
-        :url="link.url"
-        :description="link.description"
-        :icon="link.icon"
-      />
-    </div>
-
     <!-- Navigation Links -->
-    <div class="mt-8 flex flex-col items-center gap-3">
+    <div class="mt-1 flex flex-col items-center gap-2">
       <RouterLink
         to="/info"
         class="block w-48 rounded-lg px-4 py-3 text-center text-lg font-semibold text-gray-400 transition-colors duration-200 hover:bg-gray-800 hover:text-green-400"
@@ -72,6 +60,18 @@ const profile = ref({
       >
         My Projects →
       </RouterLink>
+    </div>
+
+    <!-- Link List -->
+    <div class="mt-10 flex w-full max-w-md flex-col gap-4">
+      <LinkCard
+        v-for="link in profile.links"
+        :key="link.id"
+        :title="link.title"
+        :url="link.url"
+        :description="link.description"
+        :icon="link.icon"
+      />
     </div>
   </main>
 </template>
