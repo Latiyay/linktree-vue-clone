@@ -49,7 +49,7 @@ const projects = [
 
       <header class="my-10 text-center">
         <h1 class="text-4xl font-bold text-pink-300">My Projects 🩷</h1>
-        <p class="mt-3 text-gray-400">A little collection of what I've been building.</p>
+        <p class="mt-3 text-gray-400">Explore my web development projects and creative ideas!</p>
       </header>
 
       <div class="space-y-6">
